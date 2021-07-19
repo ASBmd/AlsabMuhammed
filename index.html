@@ -258,7 +258,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
   $("#submit-form").submit((e)=>{
-      e.preventDefault()
+     if(nameValid()&&PhoneValid()&&emailValid()&&MessageValid())
+     {
+           e.preventDefault()
       $.ajax({
           url:"https://script.google.com/macros/s/AKfycbx_Tdh4c12U03RXbpGVc_h4hSlYWUVJUS8QuOHMBY8m-YtbkqIo8x1fRBv5i8PwYAjejg/exec",
           data:$("#submit-form").serialize(),
@@ -273,6 +275,11 @@
 
           }
       })
+    }
+      else{
+        alert("Kindly complete all the field");
+
+      }
   })
 </script>
 
