@@ -17,8 +17,8 @@ function nameValid(){
     
 }
 function PhoneValid(){
-    var phone=document.getElementById("phoneText").value 
-    var phoneSpan=document.getElementById("phoneSpan");
+    var phone=document.getElementById("textphone").value 
+    var phoneSpan=document.getElementById("phonefield");
     var letters= /^\d{10}$/;
     if(phone==""){
         phoneSpan.innerHTML="Filed is required"
