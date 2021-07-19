@@ -2,7 +2,7 @@
 function nameValid(){
     var name=document.getElementById("textname").value 
     var nameSpan=document.getElementById("namefield");
-    var letters= /^[a-zA-Z\s]*$/;
+    var letters= /^[-a-zA-Z-()]+(\s+[-a-zA-Z-()]+)*$/;
     if(name==""){
         nameSpan.innerHTML="Filed is required"
         return false;}
